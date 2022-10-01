@@ -1,47 +1,9 @@
 package org.example;
+ class Sorting {
 
+    private Sorting() {
 
-import java.util.Arrays;
-
-public class Sorting {
-
-    public static void main(String[] args) {
-
-
-        System.out.println("---- Testando os algoritmos de Ordenação -----");
-        System.out.println("\n");
-        // Aqui vai o algoritmo de Bubble Sort
-        int[] lista1 = {25, 21, 22, 24, 23, 27, 26};
-        System.out.println("Lista desordenada 1: " + Arrays.toString(lista1));
-        bubbleSort(lista1);
-        System.out.print("Aplicando o algoritmo de BubleSort:" + Arrays.toString(lista1));
-        System.out.println("\n");
-        // Aqui começa a parte de Insertion
-        int[] lista2 = {25, 21, 22, 24, 23, 27, 26};
-        System.out.println("Lista desordenada 2: " + Arrays.toString(lista2));
-        insertionSort(lista2);
-        System.out.println("Aplicando o algoritmo de InsertionSort:" + Arrays.toString(lista2));
-        System.out.println("\n");
-        // Aqui começa a parte de Merge
-        int[] lista3 = {25, 21, 22, 24, 23, 27, 26};
-        System.out.println("Lista desordenada 3: " + Arrays.toString(lista3));
-        mergeSort(lista3, 0, lista3.length);
-        System.out.println("Aplicando o algoritmo de MergeSort: " + Arrays.toString(lista3));
-        System.out.println("\n");
-        // aqui começa o ShellSort
-        int[] lista4 = {25, 21, 22, 24, 23, 27, 26};
-        System.out.println("Lista desordenada 4: " + Arrays.toString(lista4));
-        shellSort(lista4);
-        System.out.println("Aplicando o algoritmo de ShellSort:" + Arrays.toString(lista4));
-        System.out.println("\n");
-        // aqui começa o Selection
-        int[] lista5 = {25, 21, 22, 24, 23, 27, 26};
-        System.out.println("Lista desordenada 5: " + Arrays.toString(lista5));
-        selectionSort(lista5);
-        System.out.println("Aplicando o algoritmo de SelectionSort: " + Arrays.toString(lista5));
     }
-
-
     public static void bubbleSort(int[] listaOrdenar) {
 
         for (int i = 0; i < listaOrdenar.length-1; i++) {
@@ -88,7 +50,9 @@ public class Sorting {
 
        int[] novaLista = new int[end - start];
 
-        int i = start, m = mid, pos = 0;
+        int i = start;
+        int m = mid;
+        int pos = 0;
 
         while (i < mid && m < end) {
             if (listaOrdenar[i] <= listaOrdenar[m]) {

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Sorting.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">estudoAlgoritmos</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">Sorting.java</span></div><h1>Sorting.java</h1><pre class="source lang-java linenums">package org.example;
+ class Sorting {
+
+    private Sorting() {
+
+    }
+    public static void bubbleSort(int[] listaOrdenar) {
+
+<span class="fc bfc" id="L9" title="All 2 branches covered.">        for (int i = 0; i &lt; listaOrdenar.length-1; i++) {</span>
+<span class="fc bfc" id="L10" title="All 2 branches covered.">            for (int j = 0; j &lt; listaOrdenar.length - i - 1; j++) {</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">                    if (listaOrdenar[j] &gt; listaOrdenar[j+1]) {</span>
+<span class="fc" id="L12">                        int troca = listaOrdenar[j];</span>
+<span class="fc" id="L13">                        listaOrdenar[j] = listaOrdenar[j+1];</span>
+<span class="fc" id="L14">                        listaOrdenar[j+1] = troca;</span>
+                    }
+            }
+        }
+
+<span class="fc" id="L19">    }</span>
+
+    public static void insertionSort(int[] listaOrdenar) {
+
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        for (int i = 1; i &lt; listaOrdenar.length; ++i) {</span>
+<span class="fc" id="L24">            int j = i-1;</span>
+<span class="fc" id="L25">            int proximoElemento = listaOrdenar[i];</span>
+
+<span class="fc bfc" id="L27" title="All 4 branches covered.">            while (j &gt;= 0 &amp;&amp; listaOrdenar[j] &gt; proximoElemento) {</span>
+<span class="fc" id="L28">                listaOrdenar[j+1] = listaOrdenar[j];</span>
+<span class="fc" id="L29">                j = j - 1;</span>
+
+            }
+<span class="fc" id="L32">            listaOrdenar[j+1] = proximoElemento;</span>
+        }
+
+<span class="fc" id="L35">    }</span>
+
+    public static void mergeSort(int[] listaOrdenar, int start, int end) {
+
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        if (start &lt; end - 1) {</span>
+
+<span class="fc" id="L41">            int mid = (start+end) / 2;</span>
+<span class="fc" id="L42">            mergeSort(listaOrdenar, start, mid);</span>
+<span class="fc" id="L43">            mergeSort(listaOrdenar, mid, end);</span>
+
+<span class="fc" id="L45">            merge(listaOrdenar, start, mid, end);</span>
+        }
+<span class="fc" id="L47">    }</span>
+
+    public static void merge (int[] listaOrdenar, int start, int mid, int end) {
+
+<span class="fc" id="L51">       int[] novaLista = new int[end - start];</span>
+
+<span class="fc" id="L53">        int i = start;</span>
+<span class="fc" id="L54">        int m = mid;</span>
+<span class="fc" id="L55">        int pos = 0;</span>
+
+<span class="fc bfc" id="L57" title="All 4 branches covered.">        while (i &lt; mid &amp;&amp; m &lt; end) {</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">            if (listaOrdenar[i] &lt;= listaOrdenar[m]) {</span>
+<span class="fc" id="L59">                novaLista[pos++] = listaOrdenar[i++];</span>
+            } else {
+<span class="fc" id="L61">                novaLista[pos++] = listaOrdenar[m++];</span>
+            }
+        }
+
+<span class="fc bfc" id="L65" title="All 2 branches covered.">        while (i &lt; mid) {</span>
+<span class="fc" id="L66">            novaLista[pos++] = listaOrdenar[i++];</span>
+        }
+
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        while ( m &lt; end) {</span>
+<span class="fc" id="L70">            novaLista[pos++] = listaOrdenar[m++];</span>
+        }
+
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        for (pos = 0, i = start; i &lt; end; i++, pos++) {</span>
+<span class="fc" id="L74">            listaOrdenar[i] = novaLista[pos];</span>
+        }
+<span class="fc" id="L76">    }</span>
+
+    public static void shellSort (int[] listaOrdenar) {
+<span class="fc" id="L79">        int tamanho = listaOrdenar.length;</span>
+
+<span class="fc bfc" id="L81" title="All 2 branches covered.">        for (int distancia = tamanho/2; distancia &gt; 0; distancia /= 2) {</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">            for (int i = distancia; i &lt; tamanho; i++) {</span>
+<span class="fc" id="L83">                int temp = listaOrdenar[i];</span>
+<span class="fc" id="L84">                int j = i;</span>
+<span class="fc bfc" id="L85" title="All 4 branches covered.">                while (j &gt;= distancia &amp;&amp; listaOrdenar[j - distancia] &gt; temp) {</span>
+<span class="fc" id="L86">                    listaOrdenar[j] = listaOrdenar[j - distancia];</span>
+<span class="fc" id="L87">                    j -= distancia;</span>
+                }
+<span class="fc" id="L89">                listaOrdenar[j] = temp;</span>
+            }
+        }
+<span class="fc" id="L92">    }</span>
+
+    public static void selectionSort(int[] listaOrdenar) {
+<span class="fc bfc" id="L95" title="All 2 branches covered.">        for (int i = 0; i &lt; listaOrdenar.length; i++) {</span>
+<span class="fc" id="L96">            int indice = i;</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">            for (int j = i + 1; j &lt; listaOrdenar.length; j++) {</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">                if (listaOrdenar[j] &lt; listaOrdenar[indice]) {</span>
+<span class="fc" id="L99">                    indice = j;</span>
+                }
+            }
+<span class="fc" id="L102">            int menorNumero = listaOrdenar[indice];</span>
+<span class="fc" id="L103">            listaOrdenar[indice] = listaOrdenar[i];</span>
+<span class="fc" id="L104">            listaOrdenar[i] = menorNumero;</span>
+        }
+<span class="fc" id="L106">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
