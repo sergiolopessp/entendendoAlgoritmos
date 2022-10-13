@@ -17,7 +17,7 @@ class SortingTest {
     }
 
     @Test
-    void ordenaUsandoSorting() {
+    void ordenaUsandoInsertion() {
         int[] listaDesordenada = {25, 21, 22, 24, 23, 27, 26};
         Sorting.insertionSort(listaDesordenada);
         assertArrayEquals(listaOrdenada, listaDesordenada, "A Lista não estã ordenada :");
