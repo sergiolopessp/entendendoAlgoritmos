@@ -4,7 +4,7 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
 
 # Ordenação (Sort)
 
-- https://deviniciative.wordpress.com/?p=2886
+- https://deviniciative.wordpress.com/2022/10/14/entendendo-algoritmos-de-ordenacao-sort/
 
 ------
 
@@ -12,3 +12,4 @@ Os pré-requisitos para acompanhar esses links:
 
 - Java 11+ 
 - IDE de Desenvolvimento (Usei o Intellij Community)
+- Junit 5 (para os testes Unitários)
