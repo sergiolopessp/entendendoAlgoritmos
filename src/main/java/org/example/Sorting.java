@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-
 class Sorting {
 
     private Sorting() {
