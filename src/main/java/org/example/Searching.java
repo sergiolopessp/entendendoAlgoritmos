@@ -21,4 +21,24 @@ class Searching {
 
             return encontrou;
     }
+
+    public static Boolean binarySearch(int[] listaBuscar, int item) {
+        int inicio = 0;
+        int fim = listaBuscar.length;
+        Boolean encontrou = false;
+
+        while ((inicio <= fim) && !(Boolean.TRUE.equals(encontrou))) {
+            int metade = (inicio + fim) / 2;
+            if (listaBuscar[metade] == item) {
+                encontrou = true;
+            } else {
+                if (item < listaBuscar[metade]) {
+                    fim = metade - 1;
+                } else {
+                    inicio = metade + 1;
+                }
+            }
+        }
+        return encontrou;
+    }
 }

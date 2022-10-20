@@ -21,5 +21,25 @@ class Searching {
 
 <span class="fc" id="L22">            return encontrou;</span>
     }
+
+    public static Boolean binarySearch(int[] listaBuscar, int item) {
+<span class="fc" id="L26">        int inicio = 0;</span>
+<span class="fc" id="L27">        int fim = listaBuscar.length;</span>
+<span class="fc" id="L28">        Boolean encontrou = false;</span>
+
+<span class="fc bfc" id="L30" title="All 4 branches covered.">        while ((inicio &lt;= fim) &amp;&amp; !(Boolean.TRUE.equals(encontrou))) {</span>
+<span class="fc" id="L31">            int metade = (inicio + fim) / 2;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">            if (listaBuscar[metade] == item) {</span>
+<span class="fc" id="L33">                encontrou = true;</span>
+            } else {
+<span class="fc bfc" id="L35" title="All 2 branches covered.">                if (item &lt; listaBuscar[metade]) {</span>
+<span class="fc" id="L36">                    fim = metade - 1;</span>
+                } else {
+<span class="fc" id="L38">                    inicio = metade + 1;</span>
+                }
+            }
+<span class="fc" id="L41">        }</span>
+<span class="fc" id="L42">        return encontrou;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
