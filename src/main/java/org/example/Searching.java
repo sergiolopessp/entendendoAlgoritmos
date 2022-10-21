@@ -41,4 +41,23 @@ class Searching {
         }
         return encontrou;
     }
+
+    public static Boolean interpolationSearch(int[] listaBuscar, int item) {
+        int indice0 = 0;
+        int indiceN = (listaBuscar.length - 1);
+        Boolean encontrou = false;
+
+        while (indice0 <= indiceN && item >= listaBuscar[indice0] && item <= listaBuscar[indiceN] && !(Boolean.TRUE.equals(encontrou))) {
+            int meio = indice0 + (indiceN - indice0) * (item - listaBuscar[indice0]) / (listaBuscar[indiceN] - listaBuscar[indice0]);
+
+            if (listaBuscar[meio] == item) {
+              encontrou = true;
+            }
+
+            if (listaBuscar[meio] < item) {
+                indice0 = meio + 1;
+            }
+        }
+        return  encontrou;
+    }
 }

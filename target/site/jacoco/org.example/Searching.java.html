@@ -41,5 +41,24 @@ class Searching {
 <span class="fc" id="L41">        }</span>
 <span class="fc" id="L42">        return encontrou;</span>
     }
+
+    public static Boolean interpolationSearch(int[] listaBuscar, int item) {
+<span class="fc" id="L46">        int indice0 = 0;</span>
+<span class="fc" id="L47">        int indiceN = (listaBuscar.length - 1);</span>
+<span class="fc" id="L48">        Boolean encontrou = false;</span>
+
+<span class="pc bpc" id="L50" title="2 of 8 branches missed.">        while (indice0 &lt;= indiceN &amp;&amp; item &gt;= listaBuscar[indice0] &amp;&amp; item &lt;= listaBuscar[indiceN] &amp;&amp; !(Boolean.TRUE.equals(encontrou))) {</span>
+<span class="fc" id="L51">            int meio = indice0 + (indiceN - indice0) * (item - listaBuscar[indice0]) / (listaBuscar[indiceN] - listaBuscar[indice0]);</span>
+
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (listaBuscar[meio] == item) {</span>
+<span class="fc" id="L54">              encontrou = true;</span>
+            }
+
+<span class="fc bfc" id="L57" title="All 2 branches covered.">            if (listaBuscar[meio] &lt; item) {</span>
+<span class="fc" id="L58">                indice0 = meio + 1;</span>
+            }
+<span class="fc" id="L60">        }</span>
+<span class="fc" id="L61">        return  encontrou;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
