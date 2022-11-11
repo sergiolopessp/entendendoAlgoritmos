@@ -41,7 +41,7 @@ class SearchingTest {
     void achouBuscaInterpolada() {
         int[] listaBuscar = { 12, 33, 11, 99, 22, 55, 90};
         Sorting.bubbleSort(listaBuscar);
-        Boolean resultado = Searching.interpolationSearch(listaBuscar, 22);
+        Boolean resultado = Searching.interpolationSearch(listaBuscar, 99);
         assertEquals(true, resultado, "Não Achou o Resultado na Lista");
 
 

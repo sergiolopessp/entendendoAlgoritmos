@@ -47,15 +47,15 @@ class Searching {
         int indiceN = (listaBuscar.length - 1);
         Boolean encontrou = false;
 
-        while (indice0 <= indiceN && item >= listaBuscar[indice0] && item <= listaBuscar[indiceN] && !(Boolean.TRUE.equals(encontrou))) {
-            int meio = indice0 + (indiceN - indice0) * (item - listaBuscar[indice0]) / (listaBuscar[indiceN] - listaBuscar[indice0]);
+        while (item >= listaBuscar[indice0] && !(Boolean.TRUE.equals(encontrou))) {
+            int probe = indice0 + (indiceN - indice0) * (item - listaBuscar[indice0]) / (listaBuscar[indiceN] - listaBuscar[indice0]);
 
-            if (listaBuscar[meio] == item) {
+            if (listaBuscar[probe] == item) {
               encontrou = true;
             }
 
-            if (listaBuscar[meio] < item) {
-                indice0 = meio + 1;
+            if (listaBuscar[probe] < item) {
+                indice0 = probe + 1;
             }
         }
         return  encontrou;

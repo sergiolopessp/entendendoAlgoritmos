@@ -47,7 +47,7 @@ class Searching {
 <span class="fc" id="L47">        int indiceN = (listaBuscar.length - 1);</span>
 <span class="fc" id="L48">        Boolean encontrou = false;</span>
 
-<span class="pc bpc" id="L50" title="2 of 8 branches missed.">        while (indice0 &lt;= indiceN &amp;&amp; item &gt;= listaBuscar[indice0] &amp;&amp; item &lt;= listaBuscar[indiceN] &amp;&amp; !(Boolean.TRUE.equals(encontrou))) {</span>
+<span class="fc bfc" id="L50" title="All 4 branches covered.">        while (item &gt;= listaBuscar[indice0] &amp;&amp; !(Boolean.TRUE.equals(encontrou))) {</span>
 <span class="fc" id="L51">            int meio = indice0 + (indiceN - indice0) * (item - listaBuscar[indice0]) / (listaBuscar[indiceN] - listaBuscar[indice0]);</span>
 
 <span class="fc bfc" id="L53" title="All 2 branches covered.">            if (listaBuscar[meio] == item) {</span>
