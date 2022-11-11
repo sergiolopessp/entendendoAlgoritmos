@@ -6,6 +6,8 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
 
 - https://deviniciative.wordpress.com/2022/10/14/entendendo-algoritmos-de-ordenacao-sort/
 
+# Busca (Search)
+- https://deviniciative.wordpress.com/2022/11/11/entendendo-algoritmos-de-busca-search/
 ------
 
 Os pré-requisitos para acompanhar esses links:
