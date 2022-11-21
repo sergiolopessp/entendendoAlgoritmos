@@ -48,14 +48,14 @@ class Searching {
 <span class="fc" id="L48">        Boolean encontrou = false;</span>
 
 <span class="fc bfc" id="L50" title="All 4 branches covered.">        while (item &gt;= listaBuscar[indice0] &amp;&amp; !(Boolean.TRUE.equals(encontrou))) {</span>
-<span class="fc" id="L51">            int meio = indice0 + (indiceN - indice0) * (item - listaBuscar[indice0]) / (listaBuscar[indiceN] - listaBuscar[indice0]);</span>
+<span class="fc" id="L51">            int probe = indice0 + (indiceN - indice0) * (item - listaBuscar[indice0]) / (listaBuscar[indiceN] - listaBuscar[indice0]);</span>
 
-<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (listaBuscar[meio] == item) {</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            if (listaBuscar[probe] == item) {</span>
 <span class="fc" id="L54">              encontrou = true;</span>
             }
 
-<span class="fc bfc" id="L57" title="All 2 branches covered.">            if (listaBuscar[meio] &lt; item) {</span>
-<span class="fc" id="L58">                indice0 = meio + 1;</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">            if (listaBuscar[probe] &lt; item) {</span>
+<span class="fc" id="L58">                indice0 = probe + 1;</span>
             }
 <span class="fc" id="L60">        }</span>
 <span class="fc" id="L61">        return  encontrou;</span>
