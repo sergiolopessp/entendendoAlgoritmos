@@ -12,13 +12,12 @@ class PageRank {
         int quantidadePaginas = paginasRankear.length;
         double[] resultadoRanking = new double[quantidadePaginas];
         double[] resultadoTemporario = new double[quantidadePaginas];
-        final double initialPageRank = ((double) 1) / quantidadePaginas;
         final int qtdTotalIteracoes = quantidadePaginas - 1;
         int iteracoes = 1;
 
         while (iteracoes <= qtdTotalIteracoes) {
             if (iteracoes == 1) {
-                setaRankInicial(quantidadePaginas, resultadoRanking, initialPageRank);
+                setaRankInicial(quantidadePaginas, resultadoRanking);
             } else if (iteracoes == qtdTotalIteracoes) {
                 calculaDumpingFactor(quantidadePaginas, resultadoRanking);
             } else {
@@ -71,7 +70,9 @@ class PageRank {
         }
     }
 
-    private static void setaRankInicial(int quantidadePaginas, double[] resultadoRanking, double initialPageRank) {
+    private static void setaRankInicial(int quantidadePaginas, double[] resultadoRanking) {
+        double initialPageRank = ((double) 1) / quantidadePaginas;
+
         for (int k = 0; k < quantidadePaginas; k++) {
             resultadoRanking[k] = initialPageRank;
         }
