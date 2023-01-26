@@ -8,6 +8,9 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
 
 # Busca (Search)
 - https://deviniciative.wordpress.com/2022/11/11/entendendo-algoritmos-de-busca-search/
+
+# PageRank 
+- https://deviniciative.wordpress.com/2022/12/19/entendendo-algoritmos-conhecendo-o-page-rank/
 ------
 
 Os pré-requisitos para acompanhar esses links:
