@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.model.Tree;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -53,6 +54,30 @@ class SearchingTest {
         Sorting.bubbleSort(listaBuscar);
         Boolean resultado = Searching.interpolationSearch(listaBuscar, 91);
         assertEquals(false, resultado, "Encontrou, mas nao deveria encontrar");
+    }
+
+    @Test
+    void achouInteiroNaArvore() {
+        Tree<Integer> root = Tree.of(10);
+        Tree<Integer> rootFirstChild = root.addChild(2);
+        Tree<Integer> depthMostChild = rootFirstChild.addChild(3);
+        Tree<Integer> rootSecondChild = root.addChild(4);
+
+        Boolean resultado = Searching.breadthFirstSearch(4, root);
+
+        assertEquals(true, resultado, "Não conseguiu encontrar um item na arvore");
+    }
+
+    @Test
+    void naoAchouInteiroNaArvore() {
+        Tree<Integer> root = Tree.of(10);
+        Tree<Integer> rootFirstChild = root.addChild(2);
+        Tree<Integer> depthMostChild = rootFirstChild.addChild(3);
+        Tree<Integer> rootSecondChild = root.addChild(4);
+
+        Boolean resultado = Searching.breadthFirstSearch(6, root);
+
+        assertEquals(false, resultado, "Achou um item que não era para achar");
     }
 
 }

@@ -1,7 +1,17 @@
 package org.example;
 
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.example.model.Tree;
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 class Searching {
 
+    private static final Logger LOGGER = LogManager.getLogger(Searching.class);
     private Searching() {
 
     }
@@ -60,4 +70,26 @@ class Searching {
         }
         return  encontrou;
     }
+
+    public static <T> Boolean breadthFirstSearch(T value, Tree<T> root) {
+
+        Queue<Tree<T>> queue = new ArrayDeque<>();
+        queue.add(root);
+
+        Tree<T> currentNode;
+        while (!queue.isEmpty()) {
+            currentNode = queue.remove();
+            LOGGER.info("Visitando o no com valor: {}", currentNode.getValue());
+
+            if (currentNode.getValue().equals(value)) {
+                return true;
+            } else {
+                queue.addAll(currentNode.getChildren());
+            }
+        }
+        return false;
+    }
+
 }
+
+
