@@ -11,6 +11,9 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
 
 # PageRank 
 - https://deviniciative.wordpress.com/2022/12/19/entendendo-algoritmos-conhecendo-o-page-rank/
+
+# Breadth-First Search
+- https://deviniciative.wordpress.com/2023/02/07/entendendo-algoritmos-breadth-first-search/
 ------
 
 Os pré-requisitos para acompanhar esses links:
