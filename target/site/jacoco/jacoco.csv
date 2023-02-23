@@ -1,5 +1,7 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
 estudoAlgoritmos,org.example.model,Tree,0,35,0,0,0,10,0,5,0,5
+estudoAlgoritmos,org.example.model,Vertex,4,37,3,3,0,9,3,4,0,4
+estudoAlgoritmos,org.example.model,Graph,0,56,0,0,0,11,0,4,0,4
 estudoAlgoritmos,org.example,Sorting,0,300,0,40,0,55,0,26,0,6
-estudoAlgoritmos,org.example,Searching,0,173,0,26,0,40,0,18,0,5
+estudoAlgoritmos,org.example,Searching,0,222,0,32,0,52,0,22,0,6
 estudoAlgoritmos,org.example,PageRank,0,165,0,22,0,40,0,18,0,7

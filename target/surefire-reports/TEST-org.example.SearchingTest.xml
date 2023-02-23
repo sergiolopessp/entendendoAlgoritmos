@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.example.SearchingTest" time="0.835" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.example.SearchingTest" time="0.735" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sonar.login" value="sqp_95ea0c267b11353c448dde951fc24852dc7693e3"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="BR"/>
     <property name="sun.boot.library.path" value="/home/sergiolopes/.sdkman/candidates/java/19-open/lib"/>
-    <property name="sun.java.command" value="/home/sergiolopes/Documentos/Codigos/estudoAlgoritmos/target/surefire/surefirebooter17773228551714239185.jar /home/sergiolopes/Documentos/Codigos/estudoAlgoritmos/target/surefire 2023-01-31T17-39-23_788-jvmRun1 surefire16990572279365724481tmp surefire_014439920106571488265tmp"/>
+    <property name="sun.java.command" value="/home/sergiolopes/Documentos/Codigos/estudoAlgoritmos/target/surefire/surefirebooter5789069431498007081.jar /home/sergiolopes/Documentos/Codigos/estudoAlgoritmos/target/surefire 2023-02-23T10-45-45_281-jvmRun1 surefire14408973310619569668tmp surefire_010040559704442710876tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/sergiolopes/Documentos/Codigos/estudoAlgoritmos/target/test-classes:/home/sergiolopes/Documentos/Codigos/estudoAlgoritmos/target/classes:/home/sergiolopes/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.jar:/home/sergiolopes/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/sergiolopes/.m2/repository/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.jar:/home/sergiolopes/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/sergiolopes/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.1/junit-jupiter-engine-5.9.1.jar:/home/sergiolopes/.m2/repository/org/junit/platform/junit-platform-engine/1.9.1/junit-platform-engine-1.9.1.jar:/home/sergiolopes/.m2/repository/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar:/home/sergiolopes/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -29,13 +29,13 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/sergiolopes/Documentos/Codigos/estudoAlgoritmos/target/surefire/surefirebooter17773228551714239185.jar"/>
+    <property name="surefire.real.class.path" value="/home/sergiolopes/Documentos/Codigos/estudoAlgoritmos/target/surefire/surefirebooter5789069431498007081.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19+36-2238"/>
     <property name="user.name" value="sergiolopes"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="5.15.0-58-generic"/>
+    <property name="os.version" value="5.15.0-60-generic"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
@@ -57,12 +57,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="naoAchouInteiroNaArvore" classname="org.example.SearchingTest" time="0.81"/>
+  <testcase name="naoEncontrouNomeNoGraph" classname="org.example.SearchingTest" time="0.709"/>
+  <testcase name="encontrouNomeNoGrapho" classname="org.example.SearchingTest" time="0.001"/>
+  <testcase name="naoAchouInteiroNaArvore" classname="org.example.SearchingTest" time="0.014"/>
   <testcase name="naoAchouBuscaBinaria" classname="org.example.SearchingTest" time="0.001"/>
   <testcase name="achouBuscaInterpolada" classname="org.example.SearchingTest" time="0"/>
   <testcase name="naoAchouBuscaInterpolada" classname="org.example.SearchingTest" time="0"/>
   <testcase name="naoAchouBuscaLinear" classname="org.example.SearchingTest" time="0"/>
   <testcase name="achouBuscaBinaria" classname="org.example.SearchingTest" time="0"/>
   <testcase name="achouBuscaLinear" classname="org.example.SearchingTest" time="0"/>
-  <testcase name="achouInteiroNaArvore" classname="org.example.SearchingTest" time="0.001"/>
+  <testcase name="achouInteiroNaArvore" classname="org.example.SearchingTest" time="0.002"/>
 </testsuite>

@@ -4,10 +4,11 @@ package org.example;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.model.Graph;
 import org.example.model.Tree;
+import org.example.model.Vertex;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
+import java.util.*;
 
 class Searching {
 
@@ -88,6 +89,24 @@ class Searching {
             }
         }
         return false;
+    }
+
+    public static Boolean depthFirstSearch(Graph graph, String root, String buscar) {
+        Set<String> visited = new LinkedHashSet<>();
+        Deque<String> stack = new ArrayDeque<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            String vertex = stack.pop();
+            if (!visited.contains(vertex)) {
+                visited.add(vertex);
+                for (Vertex v : graph.getAdjVertices(vertex)) {
+                    stack.push(v.getLabel());
+                }
+            }
+        }
+
+        return visited.contains(buscar);
+
     }
 
 }
