@@ -14,6 +14,9 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
 
 # Breadth-First Search
 - https://deviniciative.wordpress.com/2023/02/07/entendendo-algoritmos-breadth-first-search/
+
+# Depth-First Search
+- https://deviniciative.wordpress.com/2023/02/26/entendendo-algoritmos-depth-first-search/
 ------
 
 Os pré-requisitos para acompanhar esses links:
