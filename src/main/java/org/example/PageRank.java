@@ -22,7 +22,7 @@ class PageRank {
                 calculaDumpingFactor(quantidadePaginas, resultadoRanking);
             } else {
                 trocaArrayTemporario(quantidadePaginas, resultadoRanking, resultadoTemporario);
-                calculoRankingDinamico(paginasRankear, quantidadePaginas, resultadoRanking, resultadoTemporario);
+               calculoRankingDinamico(paginasRankear, quantidadePaginas, resultadoRanking, resultadoTemporario);
             }
             iteracoes++;
         }

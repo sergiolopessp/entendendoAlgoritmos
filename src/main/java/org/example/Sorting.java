@@ -1,6 +1,9 @@
 package org.example;
 
-class Sorting {
+import java.util.*;
+import java.util.Map.Entry;
+
+public class Sorting {
 
     private Sorting() {
 
@@ -104,5 +107,17 @@ class Sorting {
             listaOrdenar[indice] = listaOrdenar[i];
             listaOrdenar[i] = menorNumero;
         }
+    }
+
+    public static Map<String, Double> ordenaPorComparadorDouble(final Map<String, Double> listaOrdenar) {
+        List<Entry<String, Double>> mapArr = new LinkedList<>(
+                listaOrdenar.entrySet());
+
+        Collections.sort(mapArr, (v1, v2) -> v2.getValue().compareTo(v1.getValue()));
+        LinkedHashMap<String, Double> sortedByComparator = new LinkedHashMap<>();
+        for (Entry<String, Double> e : mapArr) {
+            sortedByComparator.put(e.getKey(), e.getValue());
+        }
+        return sortedByComparator;
     }
 }
