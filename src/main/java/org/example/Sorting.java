@@ -109,6 +109,9 @@ public class Sorting {
         }
     }
 
+    // create a method to compare to integers and return if then are equals
+
+
     public static Map<String, Double> ordenaPorComparadorDouble(final Map<String, Double> listaOrdenar) {
         List<Entry<String, Double>> mapArr = new LinkedList<>(
                 listaOrdenar.entrySet());

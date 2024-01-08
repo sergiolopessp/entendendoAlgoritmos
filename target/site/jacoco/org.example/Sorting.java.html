@@ -109,16 +109,19 @@ public class Sorting {
         }
 <span class="fc" id="L110">    }</span>
 
-    public static Map&lt;String, Double&gt; ordenaPorComparadorDouble(final Map&lt;String, Double&gt; listaOrdenar) {
-<span class="fc" id="L113">        List&lt;Entry&lt;String, Double&gt;&gt; mapArr = new LinkedList&lt;&gt;(</span>
-<span class="fc" id="L114">                listaOrdenar.entrySet());</span>
+    // create a method to compare to integers and return if then are equals
 
-<span class="fc" id="L116">        Collections.sort(mapArr, (v1, v2) -&gt; v2.getValue().compareTo(v1.getValue()));</span>
-<span class="fc" id="L117">        LinkedHashMap&lt;String, Double&gt; sortedByComparator = new LinkedHashMap&lt;&gt;();</span>
-<span class="fc bfc" id="L118" title="All 2 branches covered.">        for (Entry&lt;String, Double&gt; e : mapArr) {</span>
-<span class="fc" id="L119">            sortedByComparator.put(e.getKey(), e.getValue());</span>
-<span class="fc" id="L120">        }</span>
-<span class="fc" id="L121">        return sortedByComparator;</span>
+
+    public static Map&lt;String, Double&gt; ordenaPorComparadorDouble(final Map&lt;String, Double&gt; listaOrdenar) {
+<span class="fc" id="L116">        List&lt;Entry&lt;String, Double&gt;&gt; mapArr = new LinkedList&lt;&gt;(</span>
+<span class="fc" id="L117">                listaOrdenar.entrySet());</span>
+
+<span class="fc" id="L119">        Collections.sort(mapArr, (v1, v2) -&gt; v2.getValue().compareTo(v1.getValue()));</span>
+<span class="fc" id="L120">        LinkedHashMap&lt;String, Double&gt; sortedByComparator = new LinkedHashMap&lt;&gt;();</span>
+<span class="fc bfc" id="L121" title="All 2 branches covered.">        for (Entry&lt;String, Double&gt; e : mapArr) {</span>
+<span class="fc" id="L122">            sortedByComparator.put(e.getKey(), e.getValue());</span>
+<span class="fc" id="L123">        }</span>
+<span class="fc" id="L124">        return sortedByComparator;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

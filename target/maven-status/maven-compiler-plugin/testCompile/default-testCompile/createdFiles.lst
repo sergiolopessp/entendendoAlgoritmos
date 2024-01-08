@@ -1,4 +1,6 @@
+org/example/compactacao/HuffmanTest.class
 org/example/SearchingTest.class
+org/example/compactacao/NodeTest.class
 org/example/VertexTest.class
 org/example/kmeans/DistanciaEuclidianaTest.class
 org/example/SortingTest.class

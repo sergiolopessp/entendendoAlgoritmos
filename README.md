@@ -21,6 +21,6 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
 
 Os pré-requisitos para acompanhar esses links:
 
-- Java 11+ 
+- Java 21+ 
 - IDE de Desenvolvimento (Usei o Intellij Community)
 - Junit 5 (para os testes Unitários)

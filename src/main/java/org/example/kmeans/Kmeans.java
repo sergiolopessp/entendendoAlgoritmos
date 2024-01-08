@@ -1,13 +1,22 @@
 package org.example.kmeans;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.Sorting;
 import org.example.model.Artista;
 import org.example.model.Centro;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.File;
+import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.*;
 
 import static java.util.stream.Collectors.toSet;
 
 public class Kmeans {
+
+    private static final Logger logger = LoggerFactory.getLogger(Kmeans.class);
 
     private Kmeans() {
         throw new IllegalStateException("Classe Utilitária, não Instanciar");
@@ -77,6 +86,7 @@ public class Kmeans {
         List<Centro> centros = new ArrayList<>();
         Map<String, Double> maximos = new HashMap<>();
         Map<String, Double> minimos = new HashMap<>();
+
         for (Artista artista : artistas) {
             artista.getFeatures().forEach((key, value) -> {
                 maximos.compute(key, (k1, max) -> max == null || value > max ? value : max);
@@ -96,6 +106,19 @@ public class Kmeans {
             centros.add(new Centro(coordenadas));
         }
         return centros;
+    }
+
+    public static void main(String[] args) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        Artista[] artistas = objectMapper.readValue(new File("src/main/resources/DataSetArtistas.json"), Artista[].class);
+        List<Artista> listaArtistas = List.of(artistas);
+        Map<Centro, List<Artista>> clusters = Kmeans.ajustar(listaArtistas, 7, new DistanciaEuclidiana(), 1000);
+        clusters.forEach((key, value) -> {
+            logger.info("-------------------------- CLUSTER ----------------------------");
+            logger.info(Sorting.ordenaPorComparadorDouble(key.getCoordenadas()).toString());
+            String membros = String.join(", ", value.stream().map(Artista::getDescription).collect(toSet()));
+            logger.info(membros);
+        });
     }
 
 }
