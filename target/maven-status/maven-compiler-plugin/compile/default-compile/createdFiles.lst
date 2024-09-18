@@ -3,11 +3,14 @@ org/example/model/Vertex.class
 org/example/model/Centro.class
 org/example/compactacao/Node.class
 org/example/PageRank.class
+org/example/whale/Point.class
+org/example/whale/WhaleOptimizer.class
 org/example/model/Artista.class
 org/example/kmeans/Distancia.class
 org/example/kmeans/DistanciaEuclidiana.class
 org/example/Sorting.class
 org/example/kmeans/Kmeans.class
 org/example/model/Tree.class
+org/example/whale/Rastrigin.class
 org/example/Searching.class
 org/example/compactacao/Huffman.class

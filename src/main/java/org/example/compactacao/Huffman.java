@@ -13,6 +13,10 @@ public class Huffman {
 
     private static Logger logger = LoggerFactory.getLogger(Huffman.class);
 
+    private Huffman() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static Node criarArvoreHuffman(String texto) {
 
         if (texto == null || texto.isEmpty()) {
@@ -45,7 +49,7 @@ public class Huffman {
     public static String codificarString(Node root, String texto) {
         Map<Character, String> codigos = new HashMap<>();
         codificar(root, codigos, "");
-        logger.info("Os Codigos Huffman para os caracteres foram: " + codigos);
+        logger.info("Os Codigos Huffman para os caracteres foram: {}", codigos);
         StringBuilder sb = new StringBuilder();
         for (char c : texto.toCharArray()) {
             sb.append(codigos.get(c));

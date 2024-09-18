@@ -9,5 +9,8 @@ estudoAlgoritmos,org.example.kmeans,DistanciaEuclidiana,0,44,2,4,0,9,2,3,0,2
 estudoAlgoritmos,org.example,Sorting,0,343,0,42,0,63,0,29,0,8
 estudoAlgoritmos,org.example,Searching,0,222,0,32,0,52,0,22,0,6
 estudoAlgoritmos,org.example,PageRank,0,165,0,22,0,40,0,18,0,7
-estudoAlgoritmos,org.example.compactacao,Node,100,0,14,0,16,0,11,0,4,0
-estudoAlgoritmos,org.example.compactacao,Huffman,285,0,34,0,51,0,26,0,9,0
+estudoAlgoritmos,org.example.compactacao,Node,69,31,14,0,5,11,9,2,2,2
+estudoAlgoritmos,org.example.compactacao,Huffman,25,263,6,28,5,47,6,20,1,8
+estudoAlgoritmos,org.example.whale,Point,0,269,0,24,0,53,0,21,0,9
+estudoAlgoritmos,org.example.whale,Rastrigin,0,47,0,2,0,8,0,3,0,2
+estudoAlgoritmos,org.example.whale,WhaleOptimizer,14,497,4,38,5,79,5,23,1,6

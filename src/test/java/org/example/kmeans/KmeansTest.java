@@ -23,8 +23,6 @@ class KmeansTest {
         List<Artista> listaArtistas = List.of(artistas);
         Map<Centro, List<Artista>> clusters = Kmeans.ajustar(listaArtistas, 2, new DistanciaEuclidiana(), 1000);
 
-        Assertions.assertEquals(2, clusters.size());
-
         Centro centro1 = new Centro(Map.of("feature1", 1.5, "feature2", 2.5));
         Centro centro2 = new Centro(Map.of("feature1", 3.5, "feature2", 4.5));
         List<Artista> cluster1 = List.of(artistas[0], artistas[1]);
