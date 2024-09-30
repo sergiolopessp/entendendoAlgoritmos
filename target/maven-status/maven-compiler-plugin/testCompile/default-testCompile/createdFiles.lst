@@ -1,12 +1,13 @@
 org/example/compactacao/HuffmanTest.class
-org/example/SearchingTest.class
-org/example/whale/RastriginTest.class
 org/example/compactacao/NodeTest.class
-org/example/whale/PointTest.class
 org/example/VertexTest.class
+org/example/model/RastriginTest.class
+org/example/kmeans/KmeansTest.class
+org/example/SearchingTest.class
+org/example/graywolves/GrayWolfOptimizerTest.class
 org/example/kmeans/DistanciaEuclidianaTest.class
 org/example/SortingTest.class
-org/example/kmeans/KmeansTest.class
+org/example/model/PointTest.class
 org/example/whale/WhaleOptimizerTest.class
 org/example/model/CentroTest.class
 org/example/PageRankTest.class

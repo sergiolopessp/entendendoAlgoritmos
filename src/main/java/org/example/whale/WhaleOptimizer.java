@@ -1,8 +1,14 @@
 package org.example.whale;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.example.model.Point;
+import org.example.model.Rastrigin;
+
 import java.security.SecureRandom;
 
 public class WhaleOptimizer {
+
     int popSize;
     int iterations;
     int dimensions;
@@ -20,6 +26,8 @@ public class WhaleOptimizer {
     double  p;
 
     SecureRandom random = new SecureRandom();
+
+    private static final Logger logger = LogManager.getLogger(WhaleOptimizer.class);
     
     public WhaleOptimizer(int iterations, int popSize, int dimensions) {
         this.iterations = iterations;
@@ -126,7 +134,7 @@ public class WhaleOptimizer {
 
 
             }
-            System.out.println("Iteration: " + i + " best fitness is =" + minValueOfSolution);
+            logger.info("Iteration: {} best fitness is = {}", i, minValueOfSolution);
         }
     }
 
@@ -147,8 +155,4 @@ public class WhaleOptimizer {
         return result;
     }
 
-    public static void main(String[] args) {
-        WhaleOptimizer wo = new WhaleOptimizer(50, 10, 30);
-        wo.optimze();
-    }
 }

@@ -2,5 +2,5 @@ projectKey=estudoAlgoritmos
 serverUrl=http://localhost:9000
 serverVersion=10.6.0.92116
 dashboardUrl=http://localhost:9000/dashboard?id=estudoAlgoritmos
-ceTaskId=9149c49b-cf3c-44ce-84cf-26f3aeeef65b
-ceTaskUrl=http://localhost:9000/api/ce/task?id=9149c49b-cf3c-44ce-84cf-26f3aeeef65b
+ceTaskId=2038bb7f-52d2-464d-98b2-7008b5a6f923
+ceTaskUrl=http://localhost:9000/api/ce/task?id=2038bb7f-52d2-464d-98b2-7008b5a6f923

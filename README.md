@@ -51,7 +51,35 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
       end while
       return X*
 
+# Versão 1.9.0 (23/09/2024)
+- Implantação do Algoritmo GrayWolfOptimizer
+  - Este algoritmo metaheurístico foi proposto por Seyedali Mirajaliali, Seyed Muhammad e Andrew Lewis em um artigo de 2014. Foi inspirado na hierarquia social nas técnicas de caça dos lobos cinzentos.
+  - PseudoCodigo:
+    - Begin
+      Initialize the parameters popsize, maxiter, ub and lb where
+      popsize: size of population,
+      maxiter: maximum number of iterations,
+      ub: upper bound(s) of the variables,
+      lb: lower bound(s) of the variables;
+      Generate the initial positions of gray wolves with ub and lb;
+      Initialize and Calculate the fitness of each gray wolf;
+      alpha = the gray wolf with the first maximum fitness;
+      beta = the gray wolf with the second maximum fitness;
+      delta = the gray wolf with the third maximum fitness;
+      While
+      for  : popsize
+      Update the position of the current gray wolf  ;
+      end for
+      Update and
+      Calculate the fitness of all gray wolves;
+      Update alpha, beta, and delta;
+      ;;
+      end while
+      Return alpha;
+      End
 
+
+_______________________________________________________
 Os pré-requisitos para acompanhar esses links:
 
 - Java 22+ 

@@ -1,4 +1,4 @@
-package org.example.whale;
+package org.example.model;
 
 public class Point {
     public double[] p;

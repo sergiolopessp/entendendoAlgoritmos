@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>estudoAlgoritmos</artifactId>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>

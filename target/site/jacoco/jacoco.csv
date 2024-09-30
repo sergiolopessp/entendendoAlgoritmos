@@ -1,4 +1,6 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+estudoAlgoritmos,org.example.model,Point,0,269,0,24,0,53,0,21,0,9
+estudoAlgoritmos,org.example.model,Rastrigin,0,47,0,2,0,8,0,3,0,2
 estudoAlgoritmos,org.example.model,Graph,0,56,0,0,0,11,0,4,0,4
 estudoAlgoritmos,org.example.model,Tree,0,35,0,0,0,10,0,5,0,5
 estudoAlgoritmos,org.example.model,Vertex,4,37,3,3,0,9,3,4,0,4
@@ -6,11 +8,10 @@ estudoAlgoritmos,org.example.model,Artista,85,12,14,0,20,5,15,2,8,2
 estudoAlgoritmos,org.example.model,Centro,4,42,3,3,0,10,3,5,0,5
 estudoAlgoritmos,org.example.kmeans,Kmeans,63,357,7,31,14,65,10,30,3,18
 estudoAlgoritmos,org.example.kmeans,DistanciaEuclidiana,0,44,2,4,0,9,2,3,0,2
+estudoAlgoritmos,org.example.graywolves,GrayWolfOptimizer,0,448,0,24,0,70,0,17,0,5
 estudoAlgoritmos,org.example,Sorting,0,343,0,42,0,63,0,29,0,8
 estudoAlgoritmos,org.example,Searching,0,222,0,32,0,52,0,22,0,6
 estudoAlgoritmos,org.example,PageRank,0,165,0,22,0,40,0,18,0,7
 estudoAlgoritmos,org.example.compactacao,Node,69,31,14,0,5,11,9,2,2,2
 estudoAlgoritmos,org.example.compactacao,Huffman,25,263,6,28,5,47,6,20,1,8
-estudoAlgoritmos,org.example.whale,Point,0,269,0,24,0,53,0,21,0,9
-estudoAlgoritmos,org.example.whale,Rastrigin,0,47,0,2,0,8,0,3,0,2
-estudoAlgoritmos,org.example.whale,WhaleOptimizer,14,497,4,38,5,79,5,23,1,6
+estudoAlgoritmos,org.example.whale,WhaleOptimizer,4,503,4,38,2,80,4,24,0,7
