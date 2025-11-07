@@ -4,6 +4,18 @@ Arquivo com as mudanças que tem entrado neste código seguindo os padrões.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+# [1.11.0] 2025-11-07
+### Changed
+    - Versão do Java atualizada para a 24
+
+### Added
+  - Algoritmo de ConsistenceHashing
+
+## [1.10.0] - 2024-10-01
+
+### Changed
+- Movido o Rastringim para dentro do pacote service
+
 ## [1.9.0] - 2024-09-30
 
 ### Added

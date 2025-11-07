@@ -51,7 +51,7 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
       end while
       return X*
 
-# Versão 1.9.0 (23/09/2024)
+# Versão 1.9.0 (30/09/2024)
 - Implantação do Algoritmo GrayWolfOptimizer
   - Este algoritmo metaheurístico foi proposto por Seyedali Mirajaliali, Seyed Muhammad e Andrew Lewis em um artigo de 2014. Foi inspirado na hierarquia social nas técnicas de caça dos lobos cinzentos.
   - PseudoCodigo:
@@ -78,10 +78,35 @@ Este repositório visa guardar todos os códigos referentes a série Entendendo 
       Return alpha;
       End
 
+# Versão 1.10.0 (01/10/2024)
+- Implantação do Algoritmo Bat
+  - O algoritmo bat está alinhado com os outros algoritmos metaheurísticos, que aproximam problemas NP-difíceis. Xin-She Yang desenvolveu o algoritmo em 2010.
+  - Este algoritmo é baseado nas capacidades de ecolocalização dos micromorcegos, onde a taxa de emissão e o volume são variados.
+  - Pseudocde:
+    -  Objective function f(x), x = (x1, ..., xd)
+       Initialize the bat population Xi (i = 1, 2, . . ., n)
+       Define the pulse rate ri and the loudness Ai
+       Input: Initial bat population
+       while ( t < Max number of iterations ) do
+       Generate new solutions by adjusting frequency, and updating velocities and locations/solutions (Equations in 2-10 )
+       if ( rand > ri ) then
+       Select a solution among the best solutions
+       Generate a local solution around the selected best solution
+       end if
+       Generate a new solution by flying randomly
+       if ( rand < Ai & f(Xi) < f(X∗) ) then
+       Accept the new solutions
+       Increase emission rate and reduce loudness
+       end if
+       Rank the bats and find the current best Xbest
+       end while
+       Output: Best bat found (i.e. best solution)
 
+# Versão 1.11.0 (07/11/2025)
+  - Implantação do Algoritmo de ConsistenceHashing
 _______________________________________________________
 Os pré-requisitos para acompanhar esses links:
 
-- Java 22+ 
+- Java 24+ 
 - IDE de Desenvolvimento (Usei o Intellij Community)
 - Junit 5 (para os testes Unitários)

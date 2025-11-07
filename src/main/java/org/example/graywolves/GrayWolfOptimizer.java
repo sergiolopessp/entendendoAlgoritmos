@@ -1,7 +1,7 @@
 package org.example.graywolves;
 
 import org.example.model.Point;
-import org.example.model.Rastrigin;
+import org.example.service.Rastrigin;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
